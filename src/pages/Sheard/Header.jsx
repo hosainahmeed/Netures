@@ -29,8 +29,14 @@ function Header () {
         to={'/'}
         className='text-sm md:text-xl flex md:items-center md:flex-row flex-col font-bold dark:text-white'
       >
-        {/* <img className='w-12 h-12 object-cover' src={logo} alt='Easy Serve' /> */}
-        <h1>Easy Service</h1>
+        <img
+          className='w-12 h-12 object-cover'
+          src={
+            'https://images.squarespace-cdn.com/content/v1/568ae9abb204d5dfaa7df35f/1456274454739-7UGVIMDKBXDJPQI7HT9A/PATCH-BLK.ico'
+          }
+          alt='Easy Serve'
+        />
+        <h1>Wilder Route</h1>
       </Link>
 
       {/* Navigation Links */}
@@ -69,25 +75,23 @@ function Header () {
             {/* Dropdown Menu */}
             {showDropDown && (
               <div className='absolute top-full w-48 left-0 mt-2 dark:bg-[#222] bg-white rounded-md shadow-md transition-opacity'>
-                {[
-                  'Add Travele',
-                  'Manage Travele',
-                  'Booked Traveles',
-                ].map((item, index) => (
-                  <Link
-                    key={index}
-                    to={`/dashboard/${item.toLowerCase().replace(/ /g, '-')}`}
-                    className={`block px-4 py-2 dark:text-white hover:bg-green-500 hover:text-white dark:hover:bg-gray-900 transition ${
-                      isActiveRoute(
-                        `/dashboard/${item.toLowerCase().replace(/ /g, '-')}`
-                      )
-                        ? 'bg-green-500 text-white hover:bg-green-700'
-                        : ''
-                    }`}
-                  >
-                    {item}
-                  </Link>
-                ))}
+                {['Add Travele', 'Manage Travele', 'Booked Traveles'].map(
+                  (item, index) => (
+                    <Link
+                      key={index}
+                      to={`/dashboard/${item.toLowerCase().replace(/ /g, '-')}`}
+                      className={`block px-4 py-2 dark:text-white hover:bg-green-500 hover:text-white dark:hover:bg-gray-900 transition ${
+                        isActiveRoute(
+                          `/dashboard/${item.toLowerCase().replace(/ /g, '-')}`
+                        )
+                          ? 'bg-green-500 text-white hover:bg-green-700'
+                          : ''
+                      }`}
+                    >
+                      {item}
+                    </Link>
+                  )
+                )}
               </div>
             )}
           </div>

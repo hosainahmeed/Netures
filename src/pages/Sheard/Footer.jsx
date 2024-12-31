@@ -27,7 +27,16 @@ const Footer = () => {
               onClick={() => navigate('/')}
               className='cursor-pointer flex items-center gap-2'
             >
-              <div className='w-8 md:w-12 md:h-12 overflow-hidden'>logo</div>
+              <div className='w-8 md:w-12 md:h-12 overflow-hidden flex items-center'>
+                <img
+                  className='w-12 h-12 object-cover'
+                  src={
+                    'https://images.squarespace-cdn.com/content/v1/568ae9abb204d5dfaa7df35f/1456274454739-7UGVIMDKBXDJPQI7HT9A/PATCH-BLK.ico'
+                  }
+                  alt='Easy Serve'
+                />
+                <h1>Wilder Route</h1>
+              </div>
               <h1 className='md:text-2xl font-semibold text-gray-800 hover:text-gray-600 transition-colors duration-300'>
                 EcoQuest
               </h1>

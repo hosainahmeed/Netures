@@ -10,7 +10,6 @@ import AllBlogs from '../pages/AllBlogs/AllBlogs.jsx'
 import AdventureDetails from '../pages/Details/AdventureDetails.jsx'
 import PrivateRouter from './PrivetRouter.jsx'
 import BookingPage from '../pages/BookedTravele/BookingPage.jsx'
-import UpdateAdv from '../pages/UpdateAdv/UpdateAdv.jsx'
 import ManagePlace from '../pages/Manage/ManagePlace.jsx'
 import AddToCartForm from '../pages/AddCart/AddToCartForm.jsx'
 
@@ -65,20 +64,6 @@ const router = createBrowserRouter([
               console.error('Error fetching toy details:', err)
             })
       },
-      // {
-      //   path: '/dashboard/update-services/:id',
-      //   element: (
-      //     <PrivateRouter>
-      //       <UpdateAdv></UpdateAdv>
-      //     </PrivateRouter>
-      //   ),
-      //   loader: ({ params }) =>
-      //     fetch(`http://localhost:5000/update-carts/${params.id}`)
-      //       .then(res => res.json())
-      //       .catch(err => {
-      //         console.error('Error fetching toy details:', err)
-      //       })
-      // },
       {
         path: '/login',
         element: <Login></Login>
