@@ -12,11 +12,13 @@ import PrivateRouter from './PrivetRouter.jsx'
 import BookingPage from '../pages/BookedTravele/BookingPage.jsx'
 import ManagePlace from '../pages/Manage/ManagePlace.jsx'
 import AddToCartForm from '../pages/AddCart/AddToCartForm.jsx'
+import ErrorPage from '../pages/Error/ErrorPage.jsx'
 
 const router = createBrowserRouter([
   {
     path: '/',
     element: <Layout />,
+    errorElement:<ErrorPage></ErrorPage>,
     children: [
       {
         path: '/',
@@ -58,7 +60,7 @@ const router = createBrowserRouter([
           </PrivateRouter>
         ),
         loader: ({ params }) =>
-          fetch(`http://localhost:5000/single-carts/${params.id}`)
+          fetch(`https://bangladesh-adv-server.vercel.app/single-carts/${params.id}`)
             .then(res => res.json())
             .catch(err => {
               console.error('Error fetching toy details:', err)

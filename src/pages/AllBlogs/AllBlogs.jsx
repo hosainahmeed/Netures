@@ -17,7 +17,7 @@ function AllBlogs () {
   } = useQuery({
     queryKey: ['blogs'],
     queryFn: async () => {
-      const result = await axios.get('http://localhost:5000/all-blogs')
+      const result = await axios.get('https://bangladesh-adv-server.vercel.app/all-blogs')
       return result.data
     }
   })

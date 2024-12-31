@@ -86,7 +86,7 @@ function AuthProvider ({ children }) {
       if (currentUser?.email) {
         try {
           const user = { email: currentUser.email }
-          await axios.post('http://localhost:5000/jwt', user, {
+          await axios.post('https://bangladesh-adv-server.vercel.app/jwt', user, {
             withCredentials: true
           })
         } catch (error) {

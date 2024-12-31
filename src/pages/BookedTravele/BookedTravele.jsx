@@ -18,7 +18,7 @@ function BookedTravele () {
     enabled: !!user && !loading,
     queryFn: async () => {
       const response = await axios.get(
-        `http://localhost:5000/bookings/${user.email}`
+        `https://bangladesh-adv-server.vercel.app/bookings/${user.email}`
       )
       return response.data
     }

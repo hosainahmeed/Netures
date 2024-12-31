@@ -24,7 +24,7 @@ const Register = () => {
     const { email, password, displayName, photoURL } = data
     const userData = { displayName, email, photoURL }
     try {
-      await axios.post('http://localhost:5000/user', userData, {
+      await axios.post('https://bangladesh-adv-server.vercel.app/user', userData, {
         withCredentials: true
       })
 
@@ -66,7 +66,7 @@ const Register = () => {
       const email = user?.email
       const photoURL = user?.photoURL || 'default-photo-url'
       const userData = { displayName, email, photoURL }
-      await axios.post('http://localhost:5000/user', userData)
+      await axios.post('https://bangladesh-adv-server.vercel.app/user', userData)
       Swal.fire({
         icon: 'success',
         title: 'Google Sign-In Successful',

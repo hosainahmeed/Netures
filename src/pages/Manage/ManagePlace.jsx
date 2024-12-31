@@ -23,7 +23,7 @@ function ManagePlace () {
     queryKey: ['manage', user?.email],
     enabled: !!user.email && !loading,
     queryFn: async () => {
-      const response = await axios.get('http://localhost:5000/all-carts')
+      const response = await axios.get('https://bangladesh-adv-server.vercel.app/all-carts')
       return response.data
     }
   })
@@ -88,7 +88,7 @@ function ManagePlace () {
         if (result.isConfirmed) {
           axios
             .delete(
-              `http://localhost:5000/delete-carts/${id}`
+              `https://bangladesh-adv-server.vercel.app/delete-carts/${id}`
             )
             .then(res => {
               Swal.fire({

@@ -15,7 +15,7 @@ function Allcarts () {
   const { data: cartsData = [], isLoading } = useQuery({
     queryKey: ['limit-carts'],
     queryFn: async () => {
-      const result = await axios.get('http://localhost:5000/all-carts')
+      const result = await axios.get('https://bangladesh-adv-server.vercel.app/all-carts')
       return result.data
     }
   })

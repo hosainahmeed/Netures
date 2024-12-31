@@ -15,12 +15,11 @@ function BestPlace () {
   const { data: cartsData = [], isLoading } = useQuery({
     queryKey: ['limit-carts'],
     queryFn: async () => {
-      const result = await axios.get('http://localhost:5000/all-carts-limit')
+      const result = await axios.get('https://bangladesh-adv-server.vercel.app/all-carts-limit')
       return result.data
     }
   })
 
-  // Update filteredSells with all data when cartsData changes
   useEffect(() => {
     setFilteredSells(cartsData)
   }, [cartsData])

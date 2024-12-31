@@ -23,7 +23,7 @@ function BookingPage () {
     enabled: !!user && !loading,
     queryFn: async () => {
       const result = await axios.get(
-        `http://localhost:5000/privet-booking/${user.email}`
+        `https://bangladesh-adv-server.vercel.app/privet-booking/${user.email}`
       )
       return result.data
     }
@@ -88,7 +88,7 @@ function BookingPage () {
         if (result.isConfirmed) {
           axios
             .delete(
-              `http://localhost:5000/delete-booking/${id}`
+              `https://bangladesh-adv-server.vercel.app/delete-booking/${id}`
             )
             .then(res => {
               Swal.fire({

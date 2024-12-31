@@ -66,7 +66,7 @@ function AdventureDetails () {
         email: user.email
       }
       const response = await axios.post(
-        'http://localhost:5000/booking',
+        'https://bangladesh-adv-server.vercel.app/booking',
         bookingData,
         {
           withCredentials: true

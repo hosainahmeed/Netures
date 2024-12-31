@@ -14,7 +14,7 @@ function BlogResourceSection () {
   } = useQuery({
     queryKey: ['blogs'],
     queryFn: async () => {
-      const result = await axios.get('http://localhost:5000/limit-blogs')
+      const result = await axios.get('https://bangladesh-adv-server.vercel.app/limit-blogs')
       return result.data
     }
   })

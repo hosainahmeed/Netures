@@ -33,7 +33,7 @@ const AddToCartForm = () => {
     const finalData = { ...data, ecoFriendlyFeatures };
 
     try {
-      await axios.post('http://localhost:5000/add-carts', finalData, {
+      await axios.post('https://bangladesh-adv-server.vercel.app/add-carts', finalData, {
         withCredentials: true,
       });
       Swal.fire('Success!', 'Your data has been added successfully!', 'success');

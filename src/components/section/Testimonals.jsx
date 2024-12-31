@@ -17,7 +17,7 @@ function Testimonals () {
   } = useQuery({
     queryKey: ['reviews'],
     queryFn: async () => {
-      const result = await axios.get('http://localhost:5000/all-reviews')
+      const result = await axios.get('https://bangladesh-adv-server.vercel.app/all-reviews')
       return result.data
     }
   })
