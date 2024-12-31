@@ -23,7 +23,6 @@ const BannerText = {
   heading: "Discover the Thrill of Bangladesh's Adventures",
   subheading:
     "Embark on an unforgettable journey through Bangladesh's breathtaking landscapes. From lush hills to serene rivers, adventure awaits at every turn.",
-  buttons: ['Explore', 'Learn More']
 }
 
 function renderMarquee (images, direction = 'left') {
@@ -65,18 +64,6 @@ function Banner () {
         animate={{ y: '0%' }}
         className='flex flex-wrap justify-center gap-4 mt-6'
       >
-        {BannerText.buttons.map((btn, idx) => (
-          <button
-            key={idx}
-            className={`btn px-6 py-2 rounded-md ${
-              idx === 0
-                ? 'bg-black text-white'
-                : 'bg-white border border-gray-300'
-            }`}
-          >
-            {btn}
-          </button>
-        ))}
       </motion.div>
       <motion.div
         initial={{ y: '100%' }}

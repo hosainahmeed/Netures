@@ -13,6 +13,7 @@ import BookingPage from '../pages/BookedTravele/BookingPage.jsx'
 import ManagePlace from '../pages/Manage/ManagePlace.jsx'
 import AddToCartForm from '../pages/AddCart/AddToCartForm.jsx'
 import ErrorPage from '../pages/Error/ErrorPage.jsx'
+import BlogDetails from '../pages/Blogdetails/BlogDetails.jsx'
 
 const router = createBrowserRouter([
   {
@@ -61,6 +62,20 @@ const router = createBrowserRouter([
         ),
         loader: ({ params }) =>
           fetch(`https://bangladesh-adv-server.vercel.app/single-carts/${params.id}`)
+            .then(res => res.json())
+            .catch(err => {
+              console.error('Error fetching toy details:', err)
+            })
+      },
+      {
+        path: '/blogs/:id',
+        element: (
+          <PrivateRouter>
+            <BlogDetails></BlogDetails>
+          </PrivateRouter>
+        ),
+        loader: ({ params }) =>
+          fetch(`https://bangladesh-adv-server.vercel.app/single-blogs/${params.id}`)
             .then(res => res.json())
             .catch(err => {
               console.error('Error fetching toy details:', err)
