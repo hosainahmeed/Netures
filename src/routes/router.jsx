@@ -14,6 +14,7 @@ import ManagePlace from '../pages/Manage/ManagePlace.jsx'
 import AddToCartForm from '../pages/AddCart/AddToCartForm.jsx'
 import ErrorPage from '../pages/Error/ErrorPage.jsx'
 import BlogDetails from '../pages/Blogdetails/BlogDetails.jsx'
+import UpdateProfile from '../pages/updateProfile/UpdateProfile.jsx'
 
 const router = createBrowserRouter([
   {
@@ -28,6 +29,10 @@ const router = createBrowserRouter([
       {
         path: '/all-place',
         element: <Allcarts></Allcarts>
+      },
+      {
+        path: '/all-place',
+        element: <UpdateProfile></UpdateProfile>
       },
       {
         path: '/all-blogs',
